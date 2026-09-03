@@ -1,6 +1,6 @@
 # Breakout_QMK
 
-A small, self-contained **Arkanoid/Brickout** game for any QMK
+A small, self-contained **Arkanoid/Breakout** game for any QMK
 keyboard with an **OLED display** (128×32 SSD1306).
 
 It is written as a *drop-in add-on*: the whole game lives in two files
