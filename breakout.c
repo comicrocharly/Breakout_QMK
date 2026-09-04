@@ -28,7 +28,7 @@ extern oled_rotation_t oled_rotation;
 #define BREAKOUT_STEP_MS 16
 #endif
 #ifndef BREAKOUT_PADDLE_WIDTH
-#define BREAKOUT_PADDLE_WIDTH 7
+#define BREAKOUT_PADDLE_WIDTH 8
 #endif
 #ifndef BREAKOUT_PADDLE_SPEED    // key-based speed, px per tick
 #define BREAKOUT_PADDLE_SPEED 2
@@ -91,10 +91,10 @@ extern oled_rotation_t oled_rotation;
 #define BREAKOUT_BRICK_SCORE 10
 #endif
 #ifndef BREAKOUT_LEVEL_SCORE
-#define BREAKOUT_LEVEL_SCORE 100
+#define BREAKOUT_LEVEL_SCORE 0
 #endif
 #ifndef BREAKOUT_COMBO_BONUS_PCT // per extra combo brick: % of the previous combo bricks' total points
-#define BREAKOUT_COMBO_BONUS_PCT 100
+#define BREAKOUT_COMBO_BONUS_PCT 10
 #endif
 
 #define BREAKOUT_BRICK_MAX (BREAKOUT_BRICK_ROWS * BREAKOUT_BRICK_COLS)

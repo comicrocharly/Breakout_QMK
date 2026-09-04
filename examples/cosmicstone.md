@@ -48,6 +48,9 @@ keymaps/default/breakout.h
 
 ```make
 # Breakout easter-egg game (OLED)
+# Sources are not auto-picked-up because the keymap folder has a
+# keymap.json (new QMK structure): add them to the build explicitly.
+SRC += $(KEYMAP_PATH)/breakout.c
 # Trigger: ESC + DEL held together on the GAME layer (2).
 # On layer 2 the physical ESC key is KC_ESC and the physical DEL key is
 # KC_DEL (transparent cell, see keymap.c).

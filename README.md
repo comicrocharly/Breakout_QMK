@@ -55,13 +55,24 @@ All of these are configurable, see [Configuration](#configuration).
 ### 1. Copy the files
 
 Put `breakout.c` and `breakout.h` into your keymap folder (next to
-`keymap.c`). QMK compiles every `.c` file in the keymap directory, so no
-`rules.mk` changes are needed for the sources themselves.
+`keymap.c`), and make sure the sources are compiled. QMK compiles every
+`.c` file in the keymap directory **only for classic keymaps without
+`keymap.json`**. If your keymap folder contains a `keymap.json` (new QMK
+structure), the keymap generator uses only the JSON (plus the neighboring
+`keymap.c`) and ignores the other `.c` files, so add the game explicitly to
+your keymap `rules.mk`:
+
+```make
+SRC += $(KEYMAP_PATH)/breakout.c
+```
 
 ### 2. Enable and configure (keymap `rules.mk`)
 
 ```make
 # Breakout game
+# Only needed when the keymap folder has a keymap.json (new QMK
+# structure): otherwise the game sources are picked up automatically.
+SRC += $(KEYMAP_PATH)/breakout.c
 OPT_DEFS += -DBREAKOUT_ENABLE
 OPT_DEFS += -DBREAKOUT_TRIGGER_LAYER=2
 OPT_DEFS += -DBREAKOUT_TRIGGER_KEYCODE_1=KC_ESC
