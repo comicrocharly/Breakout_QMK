@@ -28,9 +28,12 @@ Notes on this layout:
 
 - The physical `ESC` key is `KC_ESC` on the GAME layer (top-left cell) and
   the physical `DEL` key is transparent there, so the trigger `ESC`+`DEL`
-  uses two real keys, no remap needed. While the game is running `ESC` is
-  consumed by the game (exit) and never reaches the host; that is the
-  intended easter-egg behavior.
+  uses two real keys, no remap needed. While the game is **not** running
+  neither key is consumed: they behave exactly like normal keys on the
+  GAME layer. While the game **is** running, the *presses* of `ESC` and
+  `DEL` are reserved by the game (`ESC` exits, `DEL` is a no-op), while
+  the *releases* always reach the host, so a key that was pressed before
+  the game started is never left stuck on the host machine.
 - The GAME layer keeps a shifted-letter remap on the home row; to keep the
   paddle keys predictable, the physical `S` and `F` keys are explicitly
   mapped to `KC_S` and `KC_F` there (two cells in row 2). The in-game
