@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/Header.png" alt="Breakout_QMK" width="400" />
+</p>
+
 # Breakout_QMK
 
 A small, self-contained **Arkanoid/Breakout** game for any QMK
@@ -8,6 +12,10 @@ It is written as a *drop-in add-on*: the whole game lives in two files
 through four standard QMK hooks. No board-specific code, no dependency on any
 particular keyboard. When the game is not running, every hook is a no-op and
 the host keymap behaves exactly as before.
+
+<p align="center">
+  <img src="img/Body.png" alt="Gameplay preview" width="330" />
+</p>
 
 ## Gameplay
 
